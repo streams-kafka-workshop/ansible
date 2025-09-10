@@ -1,2 +1,4 @@
 ---
 
+- name: User workload monitoring
+  ansible.builtin.include_tasks: user_workload_monitoring.yml
