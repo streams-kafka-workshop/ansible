@@ -30,3 +30,10 @@ spec:
     path: {{ ocp4_workload_kafka_workshop_amq_streams_gitops_repo_path }}
     helm:
       valuesObject:
+        amq-streams-application:
+          loop:
+            count: {{ num_users }}
+          source:
+            repoUrl: {{ ocp4_workload_kafka_workshop_amq_streams_gitops_repo }}
+            targetRevision: {{ ocp4_workload_kafka_workshop_amq_streams_gitops_repo_tag }}
+          subDomain: {{ r_openshift_subdomain }}
