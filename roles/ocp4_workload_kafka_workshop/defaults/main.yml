@@ -154,6 +154,6 @@ ocp4_workload_kafka_workshop_amq_streams_application_name: amq-streams
 
 ocp4_workload_kafka_workshop_amq_streams_namespace: openshift-operators
 
-ocp4_workload_kafka_workshop_amq_streams_gitops_repo: https://github.com/btison/kafka-workshop-helm.git
+ocp4_workload_kafka_workshop_amq_streams_gitops_repo: https://github.com/streams-kafka-workshop/helm.git
 ocp4_workload_kafka_workshop_amq_streams_gitops_repo_tag: main
 ocp4_workload_kafka_workshop_amq_streams_gitops_repo_path: amq-streams
