@@ -5,6 +5,16 @@ guid: smt
 num_users: 2
 
 
+# OCP4 Authentication:
+ocp4_workload_authentication_htpasswd_user_password: openshift
+ocp4_workload_authentication_htpasswd_user_base: user
+ocp4_workload_authentication_htpasswd_user_count: 1
+
+# Shared Users
+ocp4_workload_kafka_workshop_user_count: "{{ ocp4_workload_authentication_htpasswd_user_count }}"
+ocp4_workload_kafka_workshop_user_prefix: "{{ ocp4_workload_authentication_htpasswd_user_base }}"
+
+
 # ------------------------------------------------
 # OpenShift Gitops
 # ------------------------------------------------
@@ -157,3 +167,18 @@ ocp4_workload_kafka_workshop_amq_streams_namespace: openshift-operators
 ocp4_workload_kafka_workshop_amq_streams_gitops_repo: https://github.com/streams-kafka-workshop/helm.git
 ocp4_workload_kafka_workshop_amq_streams_gitops_repo_tag: main
 ocp4_workload_kafka_workshop_amq_streams_gitops_repo_path: amq-streams
+
+# ------------------------------------------------
+# Showroom
+# ------------------------------------------------
+ocp4_workload_kafka_workshop_showroom_deployment_type: helm
+ocp4_workload_kafka_workshop_showroom_deployer_chart_version: 1.1.0
+ocp4_workload_kafka_workshop_showroom_content_git_repo: >-
+  https://github.com/streams-kafka-workshop/showroom.git
+ocp4_workload_kafka_workshop_showroom_content_git_repo_ref: main
+ocp4_workload_kafka_workshop_showroom_content_only: true
+ocp4_workload_kafka_workshop_showroom_namespace: showroom
+ocp4_workload_kafka_workshop_showroom_host_prefix: >-
+  showroom-{{ ocp4_workload_kafka_workshop_showroom_namespace }}
+
+ocp4_workload_kafka_workshop_openshift_api_internal: "https://172.30.0.1:443"
