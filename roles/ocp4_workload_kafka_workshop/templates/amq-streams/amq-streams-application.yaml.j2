@@ -32,7 +32,7 @@ spec:
       valuesObject:
         amq-streams-application:
           loop:
-            count: {{ num_users }}
+            count: {{ ocp4_workload_kafka_workshop_user_count }}
           source:
             repoUrl: {{ ocp4_workload_kafka_workshop_amq_streams_gitops_repo }}
             targetRevision: {{ ocp4_workload_kafka_workshop_amq_streams_gitops_repo_tag }}
