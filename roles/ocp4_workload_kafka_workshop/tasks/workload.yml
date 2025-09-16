@@ -6,8 +6,8 @@
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
 
-- name: Install AMQ Streams
-  ansible.builtin.include_tasks: amq_streams.yml
+- name: Install Workshop
+  ansible.builtin.include_tasks: workshop.yml
 
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
