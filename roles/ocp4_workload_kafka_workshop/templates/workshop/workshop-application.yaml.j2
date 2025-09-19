@@ -34,3 +34,9 @@ spec:
           loop:
             count: {{ ocp4_workload_kafka_workshop_user_count }}
           subDomain: {{ r_openshift_subdomain }}
+        devspaces:
+          devspaces:
+            values:
+              loop:
+                count: 2
+              subDomain: apps.kafka.eu.sandbox5300.opentlc.com
